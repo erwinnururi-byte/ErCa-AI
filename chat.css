@@ -1,0 +1,202 @@
+/* ===========================
+   ErCa AI - Chat CSS
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#312e81);
+    color:white;
+    overflow:hidden;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:260px;
+    background:#0f172a;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    border-right:1px solid rgba(255,255,255,.1);
+}
+
+.sidebar h2{
+    color:#38bdf8;
+    margin-bottom:30px;
+}
+
+.sidebar button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.sidebar button:hover{
+    background:#3b82f6;
+    transform:scale(1.03);
+}
+
+.sidebar ul{
+    list-style:none;
+    margin-top:30px;
+}
+
+.sidebar li{
+    padding:15px;
+    margin-bottom:12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sidebar li:hover{
+    background:rgba(255,255,255,.08);
+}
+
+/* Chat */
+
+.chat-container{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.topbar{
+    background:rgba(15,23,42,.9);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.topbar h2{
+    color:#38bdf8;
+}
+
+.chat-box{
+    flex:1;
+    padding:30px;
+    overflow-y:auto;
+}
+
+/* Mensajes */
+
+.bot,
+.user{
+    display:flex;
+    margin-bottom:20px;
+    align-items:flex-start;
+}
+
+.bot i,
+.user i{
+    font-size:28px;
+    margin-right:12px;
+}
+
+.bot .message{
+    background:#1e40af;
+    padding:15px 20px;
+    border-radius:15px;
+    max-width:70%;
+}
+
+.user{
+    justify-content:flex-end;
+}
+
+.user .message{
+    background:#2563eb;
+    padding:15px 20px;
+    border-radius:15px;
+    max-width:70%;
+}
+
+.user i{
+    margin-left:12px;
+    margin-right:0;
+}
+
+/* Input */
+
+.input-area{
+    display:flex;
+    padding:20px;
+    background:#0f172a;
+    gap:10px;
+}
+
+.input-area input{
+    flex:1;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+.input-area button{
+    width:60px;
+    border:none;
+    border-radius:12px;
+    background:#38bdf8;
+    color:#000;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+.input-area button:hover{
+    transform:scale(1.08);
+}
+
+/* Scroll */
+
+.chat-box::-webkit-scrollbar{
+    width:8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb{
+    background:#38bdf8;
+    border-radius:10px;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.sidebar{
+    display:none;
+}
+
+.chat-container{
+    width:100%;
+}
+
+.bot .message,
+.user .message{
+    max-width:90%;
+}
+
+.input-area{
+    padding:15px;
+}
+
+.input-area input{
+    font-size:15px;
+}
+
+}
+
